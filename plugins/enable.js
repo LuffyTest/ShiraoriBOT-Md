@@ -19,6 +19,11 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         throw false
       }
       chat.welcome = isEnable
+            case 'document':
+      case 'doc':
+      case 'dokumen':
+      case 'dok':
+        chat.useDocument = isEnable
       break
 case 'simi':
       if (m.isGroup) {
