@@ -28,7 +28,7 @@ global.APIKeys = { // APIKey Here
 
 // Sticker WM
 global.stiker_wait = 'wait'
-global.packname = '© Alice'
+global.packname = '© Alice 🥀'
 global.author = 'Wabot'
 global.email = 'arisuxdd@yahoo.com'
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=runner-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
