@@ -29,14 +29,10 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   if (yt2 === false) throw 'semua server gagal'
   let { dl_link, thumb, title, filesize, filesizeF } = yt
 let anu =  `
-*Judul:* ${title}
-*Ukuran File Audio:* ${filesizeF}
-*Ukuran File Video:* ${yt2.filesizeF}
-*Server y2mate:* ${usedServer}
-*link sumber:* 
-${vid.url}
-
-`
+*🔮 Title:* ${title}
+*🔻 Audio File Size:* ${filesizeF}
+*🔻 Video File Size:* ${yt2.filesizeF}
+*🍃 Server:* ${usedServer}`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
@@ -46,8 +42,8 @@ ${vid.url}
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: 'DONASI',
-               url: 'https://saweria.co/ilmanhdyt',
+               displayText: 'Youtube Url',
+               url: `${vid.url}`,
              }
 
            },
