@@ -169,13 +169,6 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
                displayText: 'Instagram',
                url: 'https://www.instagram.com/alicewabot'
              }
-
-           },
-             {
-             callButton: {
-               displayText: 'Nomor Owner',
-               PhoneNumber: '0813-5104-7727'
-             }
            }]
          }
        }
