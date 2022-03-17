@@ -7,26 +7,24 @@ const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessa
 let fs = require('fs')
 let handler = async (m) => {
 let esce = `
-Bot ini Menggunakan Script Dari
-
-https://github.com/ilmanhdyt/ShiraoriBOT-Md`
+Hello Honey How Can i Help You? 💕`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
          hydratedTemplate: {
            hydratedContentText: esce,
            locationMessage: { 
-           jpegThumbnail: fs.readFileSync('./media/esce.jpg') },           
+           jpegThumbnail: fs.readFileSync('./media/alive.jpg') },           
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: '💠 Source Code',
-               url: 'https://github.com/ilmanhdyt/ShiraoriBOT-Md'
+               displayText: 'Telegram Group',
+               url: 'https://t.me/WhatsAppGang'
              }
 
            },
                {
              quickReplyButton: {
-               displayText: 'Ok Bang',
+               displayText: 'MENU',
                id: '.menu',
              }
 
