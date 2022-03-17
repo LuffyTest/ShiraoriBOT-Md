@@ -32,40 +32,33 @@ const defaultMenu = {
 let handler = async (m, { conn, usedPrefix: _p, args, command, DevMode }) => {
   let tags
   let teks = `${args[0]}`.toLowerCase()
-  let arrayMenu = ['all', 'anime', 'update', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner']
+  let arrayMenu = ['main', 'anime', 'tools', 'group', 'internet', 'sticker', 'fun', 'game', 'xp', 'advanced', 'rpg', 'kerang', 'absen', 'github', 'grup', 'info', 'internet','downloader', 'tools', 'fun', 'database', 'nsfw', 'premium', 'jadibot', 'info', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
-    'main': 'ALL MENU',
-    'game': 'GAME',
-    'anime': 'ANIME', 
-    'rpg': 'RPG', 
-    'edukasi': 'EDUKASI', 
-    'news': 'NEWS', 
-    'random': 'RANDOM',
-    'xp': 'EXP & LIMIT',
-    'sticker': 'STIKER',
-    'kerang': 'KERANG AJAIB',
-    'quotes': 'QUOTES',
-    'admin': 'ADMIN',
-    'group': 'GROUP',
-    'premium': 'PREMIUM',
-    'internet': 'INTERNET',
-    'anonymous': 'ANONYMOUS CHAT',
-    'nulis': 'MAGER NULIS & LOGO',
-    'downloader': 'DOWNLOADER',
-    'tools': 'TOOLS',
-    'fun': 'FUN',
-    'database': 'DATABASE',
-    'vote': 'VOTING',
-    'absen': 'ABSEN',
-    'islamic': 'ISLAMIC',
-    'audio': 'PENGUBAH SUARA',
-    'jadibot': 'JADI BOT',
-    'info': 'INFO',
-    'update': 'UPDATE',
-    'nsfw': 'NSFW',
-    'host': 'HOST',
-  }
+   'main': 'MENU UTAMA',
+  'game': 'MENU GAME',
+  'rpg': 'MENU RPG',
+  'xp': 'MENU EXP',
+  'premium': 'MENU PREMIUM',
+  'group': 'MENU GROUP',
+  'absen': 'MENU ABSEN',
+  'vote': 'MENU VOTE',
+  'owner': 'MENU OWNER',
+  'fun': 'MENU FUN',
+  'sticker': 'MENU CONVERT',
+  'maker': 'MENU MAKER',
+  'github': 'MENU GITHUB',
+  'internet': 'INTERNET',
+  'kerang': 'MENU KERANG',
+  'anime': 'MENU ANIME',
+  'jadibot': 'GET BOT'
+  'downloader': 'DOWNLOADER',
+  'nsfw': 'MENU NSFW',
+  'tools': 'MENU TOOLS',
+  'advanced': 'ADVANCED',
+  'quotes': 'MENU QUOTES',
+  'info': 'MENU INFO',
+}
   if (teks == 'game') tags = {
     'game': 'GAME'
   }
