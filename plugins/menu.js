@@ -3,17 +3,17 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': 'MENU UTAMA',
-  'game': 'MENU GAME',
-  'rpg': 'MENU RPG',
-  'xp': 'MENU EXP',
-  'premium': 'MENU PREMIUM',
-  'group': 'MENU GROUP',
+  'main': 'MAINMENU',
+  'game': 'GAME MENU',
+  'rpg': 'RPG MENU',
+  'xp': 'EXP MENU',
+  'premium': 'PREMIUM MENU',
+  'group': 'GROUP GROUP',
   'absen': 'MENU ABSEN',
   'vote': 'MENU VOTE',
-  'owner': 'MENU OWNER',
-  'fun': 'MENU FUN',
-  'sticker': 'MENU CONVERT',
+  'owner': 'OWNER MENU',
+  'fun': 'FUN MENU',
+  'sticker': 'CONVERT MENU',
   'maker': 'MENU MAKER',
   'github': 'MENU GITHUB',
   'internet': 'INTERNET',
@@ -34,6 +34,7 @@ const defaultMenu = {
 ┠ 🔸 Mode: ${global.opts['self'] ? 'Self' : 'Public'}
 ┠ 🔹 Runtime: %uptime
 ┗━━━━━━━━➣
+
 ┏━━━❰･USER INFO･❱━━━
 ┠ 🔅 Name: %name
 ┠ 🔰 Status: ---
@@ -43,11 +44,13 @@ const defaultMenu = {
 ┠ 📈 Level: %level
 ┠ 🎭 Role: %role
 ┗━━━━━━━━➣
+
 ┏━━━❰･INFOMATION･❱━━━
 ┃ This bot is still in beta stage
 ┃ if there is a bug/error please
 ┃ report to owner
 ┗━━━━━━━━➣
+
 %readmore`.trimStart(),
   header: '┏━━━❰･%category･❱━━━',
   body: '┠ %cmd %islimit %isPremium',
