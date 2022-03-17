@@ -24,7 +24,7 @@ Hello Honey How Can i Help You? 💕`
            },
                {
              quickReplyButton: {
-               displayText: 'MENU',
+               displayText: '🍂 𝑀𝐸𝒩𝒰 🍂',
                id: '.menu',
              }
 
@@ -41,7 +41,7 @@ Hello Honey How Can i Help You? 💕`
 }
 handler.help = ['sc', 'sourcecode']
 handler.tags = ['info']
-handler.command = /^(sc|sourcecode)$/i
+handler.command = /^(alive|alice)$/i
 
 module.exports = handler
 
