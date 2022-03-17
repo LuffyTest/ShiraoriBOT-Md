@@ -5,11 +5,11 @@ let fs = require('fs')
 let yts = require('yt-search')
 let fetch = require('node-fetch')
 let handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `uhm.. cari apa?\n\ncontoh:\n${usedPrefix + command} california`
+  if (!text) throw `uhm.. what are you looking for?\n\nexample:\n${usedPrefix + command} california`
   let chat = global.db.data.chats[m.chat]
   let results = await yts(text)
   let vid = results.all.find(video => video.seconds < 3600)
-  if (!vid) throw 'Konten Tidak ditemukan'
+  if (!vid) throw 'Content Not found'
   let isVideo = /2$/.test(command)
   let yt = false
   let yt2 = false
@@ -22,11 +22,11 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
       usedServer = server
       break
     } catch (e) {
-      m.reply(`Server ${server} error!${servers.length >= i + 1 ? '' : '\nmencoba server lain...'}`)
+      m.reply(`Server ${server} error!${servers.length >= i + 1 ? '' : '\ntried another server...'}`)
     }
   }
-  if (yt === false) throw 'semua server gagal'
-  if (yt2 === false) throw 'semua server gagal'
+  if (yt === false) throw 'all servers fail'
+  if (yt2 === false) throw 'all servers fail'
   let { dl_link, thumb, title, filesize, filesizeF } = yt
 let anu =  `
 *🔮 Title:* ${title}
@@ -71,9 +71,9 @@ let anu =  `
          { messageId: template.key.id }
      )
 }
-handler.help = ['play'].map(v => v + ' <pencarian>')
+handler.help = ['play'].map(v => v + ' <name>')
 handler.tags = ['downloader']
-handler.command = /^(p|play)$/i
+handler.command = /^(dj|musik|song|yt|p(lay)?)$/i
 
 handler.exp = 0
 
