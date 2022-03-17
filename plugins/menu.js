@@ -28,33 +28,32 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭────ꕥ %me ꕥ────
-│✾ Version: %version
-│✾ Library: Baileys-MD
-│✾ Mode: ${global.opts['self'] ? 'Self' : 'publik'}
-│✾ Runtime: %uptime
-╰❑
-╭─❑ 「 INFO USER 」 ❑──
-│ ✾ Name: %name
-│ ✾ Status: ---
-│ ✾ Limit: %limit
-│ ✾ Money: %money
-│ ✾ Exp: %totalexp
-│ ✾ Level: %level
-│ ✾ Role: %role
-╰❑
-╭─❑ 「 INFORMASI 」 ❑──
-│ Bot ini masih tahap beta
-│ apabila ada bug/eror harap
-│ lapor ke owner
-╰❑
+┏━━━❰❰･ %me ･❱━━━
+┠ ♻ Version: %version
+┠ 💠 Library: Baileys-MD
+┠ 🔸 Mode: ${global.opts['self'] ? 'Self' : 'Public'}
+┠ 🔹 Runtime: %uptime
+┗━━━━━━━━➣
+┏━━━❰･USER INFO･❱━━━
+┠ 🔅 Name: %name
+┠ 🔰 Status: ---
+┠ 🚀 Limit: %limit
+┠ 💱 Money: %money
+┠ 🧬 Exp: %totalexp
+┠ 📈 Level: %level
+┠ 🎭 Role: %role
+┗━━━━━━━━➣
+┏━━━❰･INFOMATION･❱━━━
+┃ This bot is still in beta stage
+┃ if there is a bug/error please
+┃ report to owner
+┗━━━━━━━━➣
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  header: '┏━━━❰･%category･❱━━━',
+  body: '┠ %cmd %islimit %isPremium',
+  footer: '┗━━━━\n',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+*Alice-Md 🤍🥀@^%version*
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
@@ -68,7 +67,7 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let name = conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
-    let locale = 'id'
+    let locale = 'en'
     // d.getTimeZoneOffset()
     // Offset -420 is 18.00
     // Offset    0 is  0.00
@@ -162,11 +161,11 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
          hydratedTemplate: {
            hydratedContentText: text.trim(),
            locationMessage: { 
-           jpegThumbnail: fs.readFileSync('./media/shiraori.jpg') },
+           jpegThumbnail: fs.readFileSync('./media/alicemenu.jpg') },
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: 'Instagram',
+               displayText: 'Instagram 🎗',
                url: 'https://www.instagram.com/alicewabot'
              }
            }]
