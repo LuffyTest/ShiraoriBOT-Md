@@ -2,7 +2,7 @@ let fetch = require("node-fetch");
 let axios = require("axios");
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-  if (!args[0]) throw `Linknya mana?`;
+  if (!args[0]) throw `Link?`;
   let vidurl = args[0].replace("xnxx", "onlineonlineoxnn");
   let res = axios
     .get(
