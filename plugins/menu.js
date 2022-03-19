@@ -3,7 +3,7 @@ let fs = require('fs')
 let path = require('path')
 let levelling = require('../lib/levelling')
 let tags = {
-  'main': 'MAINMENU',
+  'main': 'MAIN MENU',
   'game': 'GAME MENU',
   'rpg': 'RPG MENU',
   'xp': 'EXP MENU',
@@ -14,21 +14,21 @@ let tags = {
   'owner': 'OWNER MENU',
   'fun': 'FUN MENU',
   'sticker': 'CONVERT MENU',
-  'maker': 'MENU MAKER',
-  'github': 'MENU GITHUB',
-  'internet': 'INTERNET',
-  'kerang': 'MENU KERANG',
-  'anime': 'MENU ANIME',
-  'downloader': 'DOWNLOADER',
-  'nsfw': 'MENU NSFW',
-  'tools': 'MENU TOOLS',
+  'maker': 'MAKER MENU',
+  'github': 'GITHUB MENU',
+  'internet': 'INTERNET MENU',
+  'kerang': 'AUDIO MENU ',
+  'anime': 'ANIME MENU',
+  'downloader': 'DOWNLOADER MENU',
+  'nsfw': 'NSFW MENU',
+  'tools': 'TOOLS MENU',
   'advanced': 'ADVANCED',
-  'quotes': 'MENU QUOTES',
-  'info': 'MENU INFO',
+  'quotes': 'QUOTES MENU',
+  'info': 'INFO MENU',
 }
 const defaultMenu = {
   before: `
-┏━━━❰❰･ %me ･❱━━━
+┏━━━❰❰･ %me ･❱❱━━━
 ┠ ♻ Version: %version
 ┠ 💠 Library: Baileys-MD
 ┠ 🔸 Mode: ${global.opts['self'] ? 'Self' : 'Public'}
