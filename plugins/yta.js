@@ -1,37 +1,17 @@
+let { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys-md')
 let limit = 50
 const { servers, yta } = require('../lib/y2mate')
-let handler = async (m, { conn, args, isPrems, isOwner }) => {
-  if (!args || !args[0]) throw 'Uhm... where is the url?'
-  let chat = global.db.data.chats[m.chat]
-  let server = (args[1] || servers[0]).toLowerCase()
-  let { dl_link, thumb, title, filesize, filesizeF} = await yta(args[0], servers.includes(server) ? server : servers[0])
-  let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < filesize
-  conn.sendFile(m.chat, thumb, 'thumbnail.jpg', `
-*🔮 Title:* ${title}
-*🔖 Filesize:* ${filesizeF}
- ${isLimit ? 'This File Is Above Upload limit ': ''}
-`.trim(), m)
-  if (!isLimit) conn.sendFile(m.chat, dl_link, title + '.mp3', `
-*🔮 Title:* ${title}
-*🔖 Filesize:* ${filesizeF}
-`.trim(), m, null, {
-  asDocument: chat.useDocument
-})
+let handler = async(m, { conn, args, isPrems, isOwner }) => {
+    if (!args || !args[0]) return conn.reply(m.chat, 'Uhm... urlnya mana?', m)
+    let chat = global.db.data.chats[m.chat]
+    let server = (args[1] || servers[0]).toLowerCase()
+    let { dl_link, thumb, title, filesize, filesizeF } = await yta(args[0], servers.includes(server) ? server : servers[0])
+    let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < filesize
+    conn.reply(m.chat, wait, m)
+    if (!isLimit) await sock.sendMessage(m.chat, { document: { url: dl_link}, mimetype: 'audio/mpeg', fileName: `${title}.mp3`}, {quoted: m})
 }
-handler.help = ['mp3/tya'].map(v => 'yt' + v + ` <url>`)
+handler.help = ['ytmp3 <query>']
 handler.tags = ['downloader']
-handler.command = /^(yta||mp3)$/i
-handler.owner = false
-handler.mods = false
-handler.premium = false
-handler.group = false
-handler.private = false
-
-handler.admin = false
-handler.botAdmin = false
-
-handler.fail = null
-handler.exp = 0
-handler.limit = false
+handler.command = /^yt(a(udio)?|mp3|musik|lagu)$/i
 
 module.exports = handler
