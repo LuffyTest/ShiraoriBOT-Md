@@ -8,22 +8,22 @@ let handler = async (m, { conn, text }) => {
       let res = await axios.get(`https://api.lolhuman.xyz/api/xnxxsearch?apikey=711994c4ea9aa5a0ec39f7f2&query=${text}`) 
       let json = res.data
       //let ress = json.result
-      let hsl = `*_ENCONTRÉ LO SIGUIENTE_*\n\n`
+      let hsl = `*WELCOME TO THE DARKNESS 👽*\n\n`
       for (let i = 0; i < json.result.length; i++) {
-           hsl += `*Titulo:* ${json.result[i].title}\n`
-           hsl += `*Vistas:* ${json.result[i].views}\n`
-           hsl += `*Duración:* ${json.result[i].duration}\n`
-           hsl += `*Use el comando:*\n`
+           hsl += `*Title:* ${json.result[i].title}\n`
+           hsl += `*Views:* ${json.result[i].views}\n`
+           hsl += `*Duration:* ${json.result[i].duration}\n`
+           hsl += `*Use the command:*\n`
            hsl += `#xnxx ${json.result[i].link}\n`
-           hsl += `*- Para descagar el vídeo*\n\n`
+           hsl += `*- To download the video*\n\n`
          }
-           hsl += '*©The Shadow Borkers - Bot*'
+           hsl += '*© Alice 🥀*'
         conn.reply(m.chat, hsl, m)
     }catch(e){
-        m.reply("*Algo salio mal.. vuelva a intentarlo*\n\n*Si el error perdura, pude ser porque el limte de uso del servidor diario haya terminado, cada dia de restablece el límite*")
+        m.reply("*Something went wrong... please try again*\n\n*If the error persists, it could be because the daily server usage limit has expired, each day the limit is reset*")
         console.log(e)
      }
    }
 handler.command = /^(xnxxsearch|searchxnxx)$/
-handler.premium = false
+handler.premium = true
 module.exports = handler
