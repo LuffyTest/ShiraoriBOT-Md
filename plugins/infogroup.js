@@ -19,28 +19,29 @@ let handler = async (m, { conn, participants, groupMetadata, text }) => {
 
         if (text) return m.reply(msToDate(expired - new Date() * 1))
 
-        let caption = `*Informasi Grup*\n
+        let caption = `*Group Information*\n
 *ID:* 
 ${groupMetadata.id}
-*Nama:* 
+*Name:* 
 ${groupMetadata.subject}
-*Deskripsi:* 
+*Description:* 
 ${groupMetadata.desc}
-*Total Anggota:*
-${participants.length} Anggota
-*Pembuat Grup:* 
+*Total Members:*
+${participants.length} Members
+*Group Creater:* 
 @${m.chat.split`-`[0]}
-*Admin Grup:*
+*Group Admins:*
 ${listAdmin}
-*Pengaturan Bot:*
+
+*Bot Settings:*
 ${antiLink ? '✅' : '❌'} Anti Link
 ${global.db.data.chats[m.chat].delete ? '❌' : '✅'} Anti Delete
 ${isBanned ? '✅' : '❌'} Banned
-${descUpdate ? '✅' : '❌'} Deskprisi
+${descUpdate ? '✅' : '❌'} Description
 ${detect ? '✅' : '❌'} Detect
-${stiker ? '✅' : '❌'} Stiker
+${stiker ? '✅' : '❌'} Sticker
 ${welcome ? '✅' : '❌'} Welcome
-*Pengaturan Pesan Bot:*
+*Bot Message Settings:*
 Welcome: ${sWelcome}
 Bye: ${sBye}
 Promote: ${sPromote}
