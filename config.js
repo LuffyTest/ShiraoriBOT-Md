@@ -18,10 +18,10 @@ global.APIs = { // API Prefix
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
   'https://api.xteam.xyz': '86399e0f56a8347f',
-  'https://melcanz.com': 'elaina',
-  'https://api.lolhuman.xyz': 'pkebgk8248jskrkfm',
+  'https://melcanz.com': 'obefhhqP',
+  'https://api.lolhuman.xyz': '711994c4ea9aa5a0ec39f7f2',
   'https://zahirr-web.herokuapp.com': 'zahirgans',
-  'https://api.zeks.xyz': 'apivinz',
+  'https://api.zeks.xyz': 'rNOP3N9WFFY7tqbMeNp1lmWkdwLqqqq',
   'https://pencarikode.xyz': 'pais',
   'https://leyscoders-api.herokuapp.com': 'dappakntlll'
 }
