@@ -19,7 +19,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
     });
 };
 handler.help = ["xnxx"].map((v) => v + " <Link>");
-handler.tags = ["internet"];
+handler.tags = ["downloader"];
+handler.premium = true
 handler.command = /^(xnxx)$/i;
 
 handler.limit = true;
