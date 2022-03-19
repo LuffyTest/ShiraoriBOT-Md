@@ -373,11 +373,11 @@ module.exports = {
                     if (xp > 200) m.reply('Ngecit -_-') // Hehehe
                     else m.exp += xp
                     if (!isPrems && plugin.limit && global.db.data.users[m.sender].limit < plugin.limit * 1) {
-                        this.reply(m.chat, `Limit anda habis, silahkan beli melalui *${usedPrefix}buy*`, m)
+                        this.reply(m.chat, `Your limit runs out, please buy via *${usedPrefix}buy*`, m)
                         continue // Limit habis
                     }
                     if (plugin.level > _user.level) {
-                        this.reply(m.chat, `diperlukan level ${plugin.level} untuk menggunakan perintah ini. Level kamu ${_user.level}`, m)
+                        this.reply(m.chat, `${plugin.level} level is required to use this command.  Your level ${_user.level}`, m)
                         continue // If the level has not been reached
                     }
                     let extra = {
@@ -533,16 +533,16 @@ Untuk mematikan fitur ini, ketik
 
 global.dfail = (type, m, conn) => {
     let msg = {
-        rowner: 'Perintah ini hanya dapat digunakan oleh _*OWWNER!1!1!*_',
-        owner: 'Perintah ini hanya dapat digunakan oleh _*Owner Bot*_!',
-        mods: 'Perintah ini hanya dapat digunakan oleh _*Moderator*_ !',
-        premium: 'Perintah ini hanya untuk member _*Premium*_ !',
-        group: 'Perintah ini hanya dapat digunakan di grup!',
-        private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
-        admin: 'Perintah ini hanya untuk *Admin* grup!',
-        botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*',
-        restrict: 'Fitur ini di *disable*!'
+        rowner: 'This command can only be used by _OWWNER!1!1!_',
+        owner: 'This command can only be used by _Bot Owner_!',
+        mods: 'This command can only be used by _Moderator_ !',
+        premium: 'This command is only for _*Premium*_ members!',
+        group: 'This command can only be used in groups!',
+        private: 'This command can only be used in Private Chat!',
+        admin: 'Make bot as *Admin* to use this command!',
+        botAdmin: 'Make bot as *Admin* to use this command!',
+        unreg: 'Please register to use this feature by typing:\n\n*#list of names.age*\n\nExample: *#list of Alice.16*',
+        restrict: 'This feature is *disabled*!'
     }[type]
     if (msg) return m.reply(msg)
 }
