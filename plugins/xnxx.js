@@ -17,7 +17,7 @@ conn.reply(m.chat, `
 
     .get(
 
-      API("https://api.lolhuman.xyz/api/xnxx?apikey=56c3f2f2254d87b84051ab78&url=https://www.xnxx.com", {
+      API("https://api.lolhuman.xyz/api/xnxx?apikey=711994c4ea9aa5a0ec39f7f2&url=https://www.xnxx.com", {
 
         videourl: vidurl,
 
