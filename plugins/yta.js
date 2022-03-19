@@ -9,7 +9,7 @@ let handler = async(m, { conn, args, isPrems, isOwner }) => {
     conn.sendFile(m.chat, thumb, 'thumbnail.jpg', `
 *🔮 Title:* ${title}
 *🔖 Filesize:* ${filesizeF}
- ${isLimit ? 'This File Is Above Upload limit ': ''} Link:* ${dl_link}
+ ${isLimit ? 'This File Is Above Upload limit use this link and download your self  ${dl_link}': ''}
 `.trim(), m)
     if (!isLimit) conn.sendFile(m.chat, dl_link, title + '.mp3', `
 *🔮 Title:* ${title}
