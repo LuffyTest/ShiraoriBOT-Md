@@ -10,12 +10,12 @@ let handler = async (m, { conn, text }) => {
       //let ress = json.result
       let hsl = `*WELCOME TO THE DARKNESS 👽*\n\n`
       for (let i = 0; i < json.result.length; i++) {
-           hsl += `*Title:* ${json.result[i].title}\n`
-           hsl += `*Views:* ${json.result[i].views}\n`
-           hsl += `*Duration:* ${json.result[i].duration}\n`
-           hsl += `*Use the command:*\n`
+           hsl += `*🔮 Title:* ${json.result[i].title}\n`
+           hsl += `*🍂 Views:* ${json.result[i].views}\n`
+           hsl += `*🔰 Duration:* ${json.result[i].duration}\n`
+           hsl += `*🎐 Link*\n`
            hsl += `#xnxx ${json.result[i].link}\n`
-           hsl += `*- To download the video*\n\n`
+           hsl += `*- Enjoy *\n\n`
          }
            hsl += '*© Alice 🥀*'
         conn.reply(m.chat, hsl, m)
