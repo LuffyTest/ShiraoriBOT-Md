@@ -4,16 +4,11 @@
 * mending lu tambahin deh nama lu jangan hapus kreditnya
 **/
 
-const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = require('@adiwajshing/baileys')
-let fs = require('fs')
-let moment = require('moment-timezone')
-let handler = async (m) => {
-    let who
-    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.sender
-    else who = m.sender
-    let user = global.db.data.users[who]
+const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = require('@adiwajshing/baileys-md')
+let fetch = require('node-fetch')
+let handler = async (m, { usedPrefix}) => {
 let tqto = `
-*BIG THANKS TO*
+*───「  BIG THANKS TO  」───*
 
 Nurutomo: 
 https://github.com/Nurutomo
@@ -23,48 +18,45 @@ Ariffb:
 https://github.com/Ariffb25
 Ilman: 
 https://github.com/ilmanhdyt
-Amirul: 
-https://github.com/amiruldev20
+Koleksibot: 
+https://github.com/koleksibot
+Irwan:
+https://github.com/irwanx
+NekelPeler:
+https://github.com/nekelganss
+
+\`\`\`${conn.user.name}\`\`\`
 `
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
-         hydratedTemplate: {
-           hydratedContentText: tqto,
-           locationMessage: { 
-           jpegThumbnail: fs.readFileSync('./media/tqto.jpg') }, 
-           hydratedFooterText: wm,
-           hydratedButtons: [{
-             urlButton: {
-               displayText: '💠 Source Code',
-               url: 'https://github.com/ilmanhdyt/ShiraoriBOT-Md'
-             }
-
-           },
-           {
-             quickReplyButton: {
-               displayText: 'DONASI',
-               id: '.donasi',
-             }
-           },
-               {
-             quickReplyButton: {
-               displayText: 'MENU',
-               id: '.menu',
-             }
-
-           }]
-         }
-       }
-     }), { userJid: m.sender, quoted: m });
-    //conn.reply(m.chat, text.trim(), m)
+            hydratedTemplate: {
+                locationMessage: { jpegThumbnail: await(await fetch('https://avatars.githubusercontent.com/u/98952894?s')).buffer() }, 
+                hydratedContentText: tqto,
+                hydratedFooterText: wm,
+                hydratedButtons: [{
+                  index: 0,
+                   urlButton: {
+                        displayText: `🎗 Telegram Group`,
+                        url: `https://t.me/whatsappgang`
+                    }
+                }, {
+                   quickReplyButton: {
+                        displayText: `Menu`,
+                        id: `${usedPrefix}menu`
+                    },
+                    selectedIndex: 1
+                }]
+            }
+        }
+    }), { userJid: m.participant || m.key.remoteJid, quoted: m });
     return await conn.relayMessage(
-         m.chat,
-         template.message,
-         { messageId: template.key.id }
-     )
+        m.key.remoteJid,
+        template.message,
+        { messageId: template.key.id }
+    )
 }
 handler.help = ['tqto']
 handler.tags = ['info']
-handler.command = /^(credits|credit|thanks|thanksto|tqto)$/i
+handler.command = /^(credits?|t(hanks)?to|tq(to)?)$/i
 
 module.exports = handler
