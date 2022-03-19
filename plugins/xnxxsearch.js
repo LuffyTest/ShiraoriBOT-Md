@@ -20,10 +20,13 @@ let handler = async (m, { conn, text }) => {
            hsl += '*© Alice 🥀*'
         conn.reply(m.chat, hsl, m)
     }catch(e){
-        m.reply("*Something went wrong... please try again*\n\n*If the error persists, it could be because the daily server usage limit has expired, each day the limit is reset*")
+        m.reply("*Something went wrong... please try again*")
         console.log(e)
      }
    }
 handler.command = /^(xnxxsearch|searchxnxx)$/
-handler.premium = true
+handler.premium = false
+handler.limit = true
+handler.tags = ['downloader']
 module.exports = handler
+
