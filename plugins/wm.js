@@ -9,16 +9,16 @@ let handler = async (m, { conn, text }) => {
         let mime = (q.msg || q).mimetype || ''
         if (/webp/.test(mime)) {
             let img = await q.download()
-            if (!img) throw `balas stiker dengan perintah ${usedPrefix + command} <packname>|<author>`
+            if (!img) throw `reply sticker with command ${usedPrefix + command} <packname>|<author>`
             stiker = await sticker5(img, false, packname || '', author || '')
         } else if (/image/.test(mime)) {
             let img = await q.download()
-            if (!img) throw `balas stiker dengan perintah ${usedPrefix + command} <packname>|<author>`
+            if (!img) throw `reply sticker with command ${usedPrefix + command} <packname>|<author>`
             stiker = await sticker5(img, false, packname || '', author || '')
         } else if (/video/.test(mime)) {
             if ((q.msg || q).seconds > 10) return m.reply('max is 10 seconds!')
             let img = await q.download()
-            if (!img) throw `balas stiker dengan perintah ${usedPrefix + command} <packname>|<author>`
+            if (!img) throw `reply sticker with command ${usedPrefix + command} <packname>|<author>`
             stiker = await sticker5(img, false, packname || '', author || '')
         } else if (m.quoted.text) {
             if (isUrl(m.quoted.text)) stiker = await sticker(false, m.quoted.text, packname || '', author || '')
@@ -41,7 +41,7 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['wm <packname>|<author>']
 handler.tags = ['sticker']
 handler.command = /^(wm)$/i
-handler.premium = true
+handler.premium = false
 module.exports = handler
 
 const isUrl = (text) => {
