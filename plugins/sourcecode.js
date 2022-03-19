@@ -24,7 +24,7 @@ Hello Honey How Can i Help You? 💕`
            },
                {
              quickReplyButton: {
-               displayText: '🍂 𝑀𝐸𝒩𝒰 🍂',
+               displayText: '🍂 мeɴυ 🍂',
                id: '.menu',
              }
 
