@@ -11,7 +11,7 @@ let handler = async(m, { conn, args, isPrems, isOwner }) => {
 *🔖 Filesize:* ${filesizeF}
  ${isLimit ? 'This File Is Above Upload limit use this link and download your self  ${dl_link}': ''}
 `.trim(), m)
-    if (!isLimit) await sock.sendMessage(m.chat, { document: { url: dl_link}, mimetype: 'audio/mpeg', fileName: `${title}.mp3`}, {quoted: m})
+    if (!isLimit) await conn.sendMessage(m.chat, { document: { url: dl_link}, mimetype: 'audio/mpeg', fileName: `${title}.mp3`}, {quoted: m})
 }
 handler.help = ['mp3', 'a'].map(v => 'yt' + v + ` <url>`)
 handler.tags = ['downloader']
