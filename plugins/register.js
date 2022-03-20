@@ -17,7 +17,7 @@ let handler = async function (m, { text, usedPrefix, command }) {
   let sn = createHash('md5').update(m.sender).digest('hex')
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.fromMe ? conn.user.jid : m.sender
   m.reply(`
-━━━━ 「 * Registration Successful* 」━━━━
+━━━━ 「 *Registration Successful* 」━━━━
 
 ╭─• 〘 INFO 〙
 │➥ Name: ${name}
@@ -25,7 +25,7 @@ let handler = async function (m, { text, usedPrefix, command }) {
 │➥ Present: ${prems.includes(who.split`@`[0]) ? 'Please chat with the owner to claim the prize ✅' : '❌ Not a Premium User'}
 ╰──────•
 
-Type ${usedPrefix} to get the SERIAL NUMBER\n
+Type ${usedPrefix}sn to get the SERIAL NUMBER\n
 sn is used to unregister
 `.trim())
 }
