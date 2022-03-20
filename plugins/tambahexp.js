@@ -9,7 +9,7 @@ let cd2 = Math.ceil(59 - cds)
     global.db.data.users[m.sender].exp += 100000
     m.reply('Nih kak expnya ✨100000\nSilahkan cek dengan mengetikkan .my')
     global.db.data.users[m.sender].lastclaim = new Date * 1
-  } else throw `Kamu sudah mengambil exp hari ini silahkan.\n\nTunggu ${cd1} Menit ${cd2} Detik!`
+  } else throw `You\'ve taken exp today please.\n\nWait ${cd1} Minutes ${cd2} Seconds!`
 }
 handler.command = /^(tambahexp)$/i
 handler.owner = false
