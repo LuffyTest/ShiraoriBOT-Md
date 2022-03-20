@@ -8,7 +8,7 @@ let cd2 = Math.ceil(59 - cds)
     global.db.data.users[m.sender].money += 7000
     m.reply('Nih gaji lu +Rp7000')
     global.db.data.users[m.sender].lastclaim = new Date * 1
-  } else throw `Lu udah ambil jatah hari ini.\n\nTunggu ${cd1} Menit ${cd2} Detik!`
+  } else throw `You've taken your share for today.\n\nWait ${cd1} Minutes ${cd2} Seconds!`
 }
 handler.help = ['gaji', 'gajian']
 handler.tags = ['rpg']
