@@ -18,7 +18,7 @@
 
 ---
 
-<h1 align="center"> ALICE BOT WHATSAPP </h1>
+<h1 align="center"> `ALICE BOT WHATSAPP` </h1>
 
 ## Information
 > ShiraoriBOT whatsapp using a Baileys library.
