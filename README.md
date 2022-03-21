@@ -20,19 +20,14 @@
 
 <h1 align="center">ALICE BOT WHATSAPP</h1>
 
-## Information
+## Information ✼
 > AliceBot whatsapp using a Baileys library.
 > If you find some kind of bug, please forgive temporarily
 >
 > • NOTE: Make sure your network is smooth and your device is good :v,
 > 
-> • Kalo using termux it might take a long time to respond, I suggest using heroku
+> •  using termux it might take a long time to respond, I suggest using heroku
 > 
-<h3 align="center">Made by :</h3>
-<p align="center">
-  <a href="https://github.com/ilmanhdyt"><img src="https://github.com/ilmanhdyt.png?size=128" height="128" width="128" /></a>
-  <a href="https://github.com/BochilGaming"><img src="https://github.com/BochilGaming.png?size=128" height="128" width="128" /></a>
-</p>
 
 ## Tester Bot
 * Jika kamu menemukan bug jangan lupa buka Issues
