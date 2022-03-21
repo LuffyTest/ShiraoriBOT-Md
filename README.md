@@ -155,7 +155,7 @@ If successful, it will give you a message like: `SUCCESS: specified value was sa
  [![Nurutomo](https://github.com/Nurutomo.png?size=150)](https://github.com/Nurutomo) | [![Ilman](https://github.com/ilmanhdyt.png?size=150)](https://github.com/ilmanhdyt) | [![Arisu](https://github.com/ArisuXd.png?size=150)](https://github.com/ArisuXD)
 ----|----|----
 [Nurutomo](https://github.com/Nurutomo) | [Ilman](https://github.com/ilmanhdyt) | [Istikmal](https://github.com/BochilGaming)| [Arisu](https://github.com/AtisuXD)
-Author | which adds features | who have sc | Editor
+Author | which adds features | Editor
 
 ## Donate
 - [Saweria](https://saweria.co/ilmanhdyt)
