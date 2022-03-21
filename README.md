@@ -96,6 +96,12 @@ let message = await prepareWAMessageMedia({ video: fs.readFileSync('./media/shir
 * Put mongourl in Procfile `web: node . --db 'mongourl'`
 * Example `web: node . -- db 'mongodb+srv://ilman:<password>@cluster0.iiede.mongodb.net/ShiraoriBOT?retryWrites=true&w=majority'`
 
+## UNTUK PENGGUNA HEROKU
+
+### Instal Buildpack
+```* heroku/nodejs
+* https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
+* https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git*```
 
 ## FOR WINDOWS/VPS/RDP USERS
 
@@ -129,13 +135,6 @@ npm i -g typescript
 tsc -p ./node_modules/@adiwajshing/baileys
 node .
 ```
-
-## UNTUK PENGGUNA HEROKU
-
-### Instal Buildpack
-* heroku/nodejs
-* https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
-* https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git*
 
 ## Installing the FFmpeg for Windows
 * Unduh salah satu versi FFmpeg yang tersedia dengan mengklik [di sini](https://www.gyan.dev/ffmpeg/builds/).
