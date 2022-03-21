@@ -21,13 +21,13 @@
 <h1 align="center">ALICE BOT WHATSAPP</h1>
 
 ## Information
-> ShiraoriBOT whatsapp using a Baileys library.
-> Jika kamu menemukan semacam bug, harap untuk dimaklumi sementara
+> AliceBot whatsapp using a Baileys library.
+> If you find some kind of bug, please forgive temporarily
 >
-> • NOTE: Pastikan Jaringan kalian lancar dan device kalian bagus:v, 
+> • NOTE: Make sure your network is smooth and your device is good :v,
 > 
-> • Kalo pake termux mungkin bakal lama respon nya, saya sarankan pake heroku
-
+> • Kalo using termux it might take a long time to respond, I suggest using heroku
+> 
 <h3 align="center">Made by :</h3>
 <p align="center">
   <a href="https://github.com/ilmanhdyt"><img src="https://github.com/ilmanhdyt.png?size=128" height="128" width="128" /></a>
