@@ -96,7 +96,7 @@ let message = await prepareWAMessageMedia({ video: fs.readFileSync('./media/shir
 * Put mongourl in Procfile `web: node . --db 'mongourl'`
 * Example `web: node . -- db 'mongodb+srv://ilman:<password>@cluster0.iiede.mongodb.net/ShiraoriBOT?retryWrites=true&w=majority'`
 
-## UNTUK PENGGUNA HEROKU
+## FOR HEROKU USERS
 
 ### Instal Buildpack
 * heroku/nodejs
@@ -105,10 +105,10 @@ let message = await prepareWAMessageMedia({ video: fs.readFileSync('./media/shir
 
 ## FOR WINDOWS/VPS/RDP USERS
 
-* Unduh & Instal Git [`Klik Disini`](https://git-scm.com/downloads)
-* Unduh & Instal NodeJS [`Klik Disini`](https://nodejs.org/en/download)
-* Unduh & Instal FFmpeg [`Klik Disini`](https://ffmpeg.org/download.html) (**Jangan Lupa Tambahkan FFmpeg ke variabel lingkungan PATH**)
-* Unduh & Instal ImageMagick [`Klik Disini`](https://imagemagick.org/script/download.php)
+* Unduh & Instal Git [`Click here`](https://git-scm.com/downloads)
+* Unduh & Instal NodeJS [`Click here`](https://nodejs.org/en/download)
+* Unduh & Instal FFmpeg [`Click here`](https://ffmpeg.org/download.html) (**Jangan Lupa Tambahkan FFmpeg ke variabel lingkungan PATH**)
+* Unduh & Instal ImageMagick [`Click here`](https://imagemagick.org/script/download.php)
 
 ```bash
 git clone https://github.com/ilmanhdyt/ShiraoriBOT-Md
@@ -120,7 +120,7 @@ npm index
 
 ---------
 
-## UNTUK PENGGUNA TERMUX
+## FOR TERMUX USERS
 ```bash
 pkg update && pkg upgrade
 pkg install git
@@ -137,16 +137,16 @@ node .
 ```
 
 ## Installing the FFmpeg for Windows
-* Unduh salah satu versi FFmpeg yang tersedia dengan mengklik [di sini](https://www.gyan.dev/ffmpeg/builds/).
+* Download any of the available FFmpeg versions by clicking [`Click here`](https://www.gyan.dev/ffmpeg/builds/).
 * Extract file ke `C:\` path.
-* Ganti nama folder yang telah di-extract menjadi `ffmpeg`.
+* Rename the extracted folder to `ffmpeg`.
 * Run Command Prompt as Administrator.
-* Jalankan perintah berikut::
+* Run the following command::
 ```cmd
 > setx /m PATH "C:\ffmpeg\bin;%PATH%"
 ```
-Jika berhasil, akan memberikanmu pesan seperti: `SUCCESS: specified value was saved`.
-* Sekarang setelah Anda menginstal FFmpeg, verifikasi bahwa itu berhasil dengan menjalankan perintah ini untuk melihat versi:
+If successful, it will give you a message like: `SUCCESS: specified value was saved`.
+* Now that you have FFmpeg installed, verify that it worked by running this command to see the version:
 ```cmd
 > ffmpeg -version
 ```
@@ -154,8 +154,8 @@ Jika berhasil, akan memberikanmu pesan seperti: `SUCCESS: specified value was sa
 # Thanks to
  [![Nurutomo](https://github.com/Nurutomo.png?size=150)](https://github.com/Nurutomo) | [![Ilman](https://github.com/ilmanhdyt.png?size=150)](https://github.com/ilmanhdyt) | [![Istikmal](https://github.com/BochilGaming.png?size=150)](https://github.com/BochilGaming)
 ----|----|----
-[Nurutomo](https://github.com/Nurutomo) | [Ilman](https://github.com/ilmanhdyt) | [Istikmal](https://github.com/BochilGaming)
- Author | yg nambah fitur | yg punya sc
+[Nurutomo](https://github.com/Nurutomo) | [Ilman](https://github.com/ilmanhdyt) | [Istikmal](https://github.com/BochilGaming)| [Arisu](https://github.com/AtisuXD)
+Author | which adds features | who have sc | Editor
 
 ## Donate
 - [Saweria](https://saweria.co/ilmanhdyt)
