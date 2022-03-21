@@ -29,14 +29,12 @@
 > •  using termux it might take a long time to respond, I suggest using heroku
 > 
 
-## Tester Bot
-* Jika kamu menemukan bug jangan lupa buka Issues
-* Info Lebih Lanjut, Chat [owner-Shiraori](https://wa.me/6281351047727)
-* Kamu bisa testing fitur ShiraoriBOT [disini](https://wa.me/62895803135347?text=.menu)
+## Testing Bot
+* If you find a bug, don't forget to open Issues
 
 ## How To Change Menu Display
 ----
-### Gif Menu Display
+### Gif Menu Display ✼
 ```ts
  let message = await prepareWAMessageMedia({ video: fs.readFileSync('./media/shiro.mp4'), gifPlayback: true }, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -48,7 +46,7 @@
            hydratedButtons: [{
 ```
 
-### Image Menu Display
+### Image Menu Display ✼
 ```ts
 let message = await prepareWAMessageMedia({ image: fs.readFileSync('./media/shiraori.jpg')}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -60,7 +58,7 @@ let message = await prepareWAMessageMedia({ image: fs.readFileSync('./media/shir
            hydratedButtons: [{
 ```
 
-### Location Menu Display
+### Location Menu Display ✼
 ```ts
  const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
      templateMessage: {
@@ -72,7 +70,7 @@ let message = await prepareWAMessageMedia({ image: fs.readFileSync('./media/shir
            hydratedButtons: [{       
 ```
 
-### Video Menu Display
+### Video Menu Display ✼
 ```ts
 let message = await prepareWAMessageMedia({ video: fs.readFileSync('./media/shiro.mp4')}, { upload: conn.waUploadToServer })
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
