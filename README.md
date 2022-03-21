@@ -84,6 +84,11 @@ let message = await prepareWAMessageMedia({ video: fs.readFileSync('./media/shir
 ----           
 
 
+### `• Get QR Code Using Repl.it`
+> Need a **PC** for get qr and need a **PHONE** to scan the qr.
+
+[![Run on Repl.it](https://repl.it/badge/github/LuffyCloud/Alice-MD-Session)](https://replit.com/@LuffyCloud/Alice-MD-Session)
+
 ## HOW TO CONNECT TO MONGODB WHEN RUN IN HEROKU
 
 * Create account and database in mongodb atlas [`watch here`](https://youtu.be/rPqRyYJmx2g)
@@ -92,7 +97,7 @@ let message = await prepareWAMessageMedia({ video: fs.readFileSync('./media/shir
 * Example `web: node . -- db 'mongodb+srv://ilman:<password>@cluster0.iiede.mongodb.net/ShiraoriBOT?retryWrites=true&w=majority'`
 
 
-## UNTUK PENGGUNA WINDOWS/VPS/RDP
+## FOR WINDOWS/VPS/RDP USERS
 
 * Unduh & Instal Git [`Klik Disini`](https://git-scm.com/downloads)
 * Unduh & Instal NodeJS [`Klik Disini`](https://nodejs.org/en/download)
